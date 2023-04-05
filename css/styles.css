@@ -119,6 +119,9 @@ body {
 	height: auto;
 	margin-bottom: 10px;
 	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
   }
   
   /* Set styles for hidden text */
@@ -133,21 +136,28 @@ body {
   display: block;
 }
   /* Set styles for links */
-  a {
-	color: #0077c0;
-	text-decoration: none;
-	border-bottom: 1px solid #0077c0;
+  .texto {
+	color: black;
+	transition: color 0.3s ease-out;
   }
   
-  a:hover {
-	background-color: #0077c0;
-	color: #fff;
+  .texto:hover {
+	color: red;
+	animation: ejemplo 1s ease-in-out infinite;
   }
   
-  a:active {
-	background-color: #005a8c;
-	color: #fff;
+  @keyframes ejemplo {
+	0% {
+		transform: translateX(0);
+	  }
+	  50% {
+		transform: translateX(10px);
+	  }
+	  100% {
+		transform: translateX(0);
+	  }
   }
+	
   
   footer {
 	background-color: #222;
